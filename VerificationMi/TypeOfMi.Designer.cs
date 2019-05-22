@@ -38,21 +38,24 @@
             this.typeofmiTableAdapter = new VerificationMi.verificationmiDataSetTableAdapters.typeofmiTableAdapter();
             this.tableAdapterManager = new VerificationMi.verificationmiDataSetTableAdapters.TableAdapterManager();
             this.typeofmiBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.typeofmiBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.typeofmiDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.статусыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.местаПроверкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.проверяющиеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.verificationmiDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.typeofmiBindingSource)).BeginInit();
@@ -65,7 +68,10 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.оПрограммеToolStripMenuItem,
-            this.хToolStripMenuItem});
+            this.хToolStripMenuItem,
+            this.статусыToolStripMenuItem,
+            this.местаПроверкиToolStripMenuItem,
+            this.проверяющиеToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -83,6 +89,7 @@
             this.хToolStripMenuItem.Name = "хToolStripMenuItem";
             this.хToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
             this.хToolStripMenuItem.Text = "Выход";
+            this.хToolStripMenuItem.Click += new System.EventHandler(this.хToolStripMenuItem_Click);
             // 
             // verificationmiDataSet
             // 
@@ -107,6 +114,7 @@
             this.tableAdapterManager.statusTableAdapter = null;
             this.tableAdapterManager.typeofmiTableAdapter = this.typeofmiTableAdapter;
             this.tableAdapterManager.UpdateOrder = VerificationMi.verificationmiDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.userTableAdapter = null;
             // 
             // typeofmiBindingNavigator
             // 
@@ -137,6 +145,31 @@
             this.typeofmiBindingNavigator.Size = new System.Drawing.Size(800, 25);
             this.typeofmiBindingNavigator.TabIndex = 3;
             this.typeofmiBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Добавить";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 22);
+            this.bindingNavigatorCountItem.Text = "для {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Удалить";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -170,17 +203,10 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Текущее положение";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 15);
-            this.bindingNavigatorCountItem.Text = "для {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -188,7 +214,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveNextItem.Text = "Переместить вперед";
             // 
             // bindingNavigatorMoveLastItem
@@ -197,38 +223,20 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveLastItem.Text = "Переместить в конец";
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Добавить";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 20);
-            this.bindingNavigatorDeleteItem.Text = "Удалить";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // typeofmiBindingNavigatorSaveItem
             // 
             this.typeofmiBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.typeofmiBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("typeofmiBindingNavigatorSaveItem.Image")));
             this.typeofmiBindingNavigatorSaveItem.Name = "typeofmiBindingNavigatorSaveItem";
-            this.typeofmiBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.typeofmiBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.typeofmiBindingNavigatorSaveItem.Text = "Сохранить данные";
             this.typeofmiBindingNavigatorSaveItem.Click += new System.EventHandler(this.typeofmiBindingNavigatorSaveItem_Click);
             // 
@@ -258,6 +266,27 @@
             this.dataGridViewTextBoxColumn3.HeaderText = "Описание";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
+            // статусыToolStripMenuItem
+            // 
+            this.статусыToolStripMenuItem.Name = "статусыToolStripMenuItem";
+            this.статусыToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
+            this.статусыToolStripMenuItem.Text = "Статусы СИ";
+            this.статусыToolStripMenuItem.Click += new System.EventHandler(this.статусыToolStripMenuItem_Click);
+            // 
+            // местаПроверкиToolStripMenuItem
+            // 
+            this.местаПроверкиToolStripMenuItem.Name = "местаПроверкиToolStripMenuItem";
+            this.местаПроверкиToolStripMenuItem.Size = new System.Drawing.Size(129, 20);
+            this.местаПроверкиToolStripMenuItem.Text = "Места проверки СИ";
+            this.местаПроверкиToolStripMenuItem.Click += new System.EventHandler(this.местаПроверкиToolStripMenuItem_Click);
+            // 
+            // проверяющиеToolStripMenuItem
+            // 
+            this.проверяющиеToolStripMenuItem.Name = "проверяющиеToolStripMenuItem";
+            this.проверяющиеToolStripMenuItem.Size = new System.Drawing.Size(114, 20);
+            this.проверяющиеToolStripMenuItem.Text = "Поверяющие СИ";
+            this.проверяющиеToolStripMenuItem.Click += new System.EventHandler(this.проверяющиеToolStripMenuItem_Click);
+            // 
             // TypeOfMi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -267,6 +296,7 @@
             this.Controls.Add(this.typeofmiBindingNavigator);
             this.Controls.Add(this.menuStrip1);
             this.Name = "TypeOfMi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Типы средств измерения";
             this.Load += new System.EventHandler(this.TypeOfMi_Load);
             this.menuStrip1.ResumeLayout(false);
@@ -307,5 +337,8 @@
         private System.Windows.Forms.DataGridView typeofmiDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.ToolStripMenuItem статусыToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem местаПроверкиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem проверяющиеToolStripMenuItem;
     }
 }

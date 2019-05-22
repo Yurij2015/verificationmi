@@ -31,5 +31,35 @@ namespace VerificationMi
             this.typeofmiTableAdapter.Fill(this.verificationmiDataSet.typeofmi);
 
         }
+
+        private void статусыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Status st = new Status();
+            st.Show();
+        }
+
+        private void местаПроверкиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Place pc = new Place();
+            pc.Show();
+        }
+
+        private void проверяющиеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Specialist sp = new Specialist();
+            sp.Show();
+        }
+
+        private void типыСИToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TypeOfMi tof = new TypeOfMi();
+            tof.Show();
+        }
+
+        private void хToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+        }
     }
 }

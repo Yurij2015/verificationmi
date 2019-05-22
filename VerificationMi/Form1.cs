@@ -47,7 +47,7 @@ namespace VerificationMi
             try
             {
                 SqlConnection con = new SqlConnection(us);
-                SqlCommand cmd = new SqlCommand("Select * from login where UserName=@username and Password=@password", con);
+                SqlCommand cmd = new SqlCommand("Select * from login where username=@username and password=@password", con);
 
                 cmd.Parameters.AddWithValue("@username", textBox1.Text);
                 cmd.Parameters.AddWithValue("@password", textBox2.Text);

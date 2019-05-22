@@ -33,37 +33,27 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.хToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.статусыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.местаПроверкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.проверяющиеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.типыСИToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.verificationmiDataSet = new VerificationMi.verificationmiDataSet();
-            this.measuringinstrumentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.measuringinstrumentTableAdapter = new VerificationMi.verificationmiDataSetTableAdapters.measuringinstrumentTableAdapter();
-            this.tableAdapterManager = new VerificationMi.verificationmiDataSetTableAdapters.TableAdapterManager();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.measuringinstrumentBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.measuringinstrumentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.verificationmiDataSet = new VerificationMi.verificationmiDataSet();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.measuringinstrumentBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.measuringinstrumentDataGridView = new System.Windows.Forms.DataGridView();
-            this.specialstBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.specialstTableAdapter = new VerificationMi.verificationmiDataSetTableAdapters.specialstTableAdapter();
-            this.placeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.placeTableAdapter = new VerificationMi.verificationmiDataSetTableAdapters.placeTableAdapter();
-            this.statusBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.statusTableAdapter = new VerificationMi.verificationmiDataSetTableAdapters.statusTableAdapter();
-            this.typeofmiBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.typeofmiTableAdapter = new VerificationMi.verificationmiDataSetTableAdapters.typeofmiTableAdapter();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,14 +62,24 @@
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.specialstBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.placeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.statusBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.typeofmiBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.measuringinstrumentTableAdapter = new VerificationMi.verificationmiDataSetTableAdapters.measuringinstrumentTableAdapter();
+            this.tableAdapterManager = new VerificationMi.verificationmiDataSetTableAdapters.TableAdapterManager();
+            this.placeTableAdapter = new VerificationMi.verificationmiDataSetTableAdapters.placeTableAdapter();
+            this.specialstTableAdapter = new VerificationMi.verificationmiDataSetTableAdapters.specialstTableAdapter();
+            this.statusTableAdapter = new VerificationMi.verificationmiDataSetTableAdapters.statusTableAdapter();
+            this.typeofmiTableAdapter = new VerificationMi.verificationmiDataSetTableAdapters.typeofmiTableAdapter();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.verificationmiDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.measuringinstrumentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.measuringinstrumentBindingNavigator)).BeginInit();
             this.measuringinstrumentBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.measuringinstrumentBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.verificationmiDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.measuringinstrumentDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.specialstBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.placeBindingSource)).BeginInit();
@@ -115,58 +115,38 @@
             this.хToolStripMenuItem.Text = "Выход";
             this.хToolStripMenuItem.Click += new System.EventHandler(this.хToolStripMenuItem_Click);
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
             // статусыToolStripMenuItem
             // 
             this.статусыToolStripMenuItem.Name = "статусыToolStripMenuItem";
             this.статусыToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
             this.статусыToolStripMenuItem.Text = "Статусы СИ";
+            this.статусыToolStripMenuItem.Click += new System.EventHandler(this.статусыToolStripMenuItem_Click);
             // 
             // местаПроверкиToolStripMenuItem
             // 
             this.местаПроверкиToolStripMenuItem.Name = "местаПроверкиToolStripMenuItem";
             this.местаПроверкиToolStripMenuItem.Size = new System.Drawing.Size(129, 20);
             this.местаПроверкиToolStripMenuItem.Text = "Места проверки СИ";
+            this.местаПроверкиToolStripMenuItem.Click += new System.EventHandler(this.местаПроверкиToolStripMenuItem_Click);
             // 
             // проверяющиеToolStripMenuItem
             // 
             this.проверяющиеToolStripMenuItem.Name = "проверяющиеToolStripMenuItem";
             this.проверяющиеToolStripMenuItem.Size = new System.Drawing.Size(114, 20);
             this.проверяющиеToolStripMenuItem.Text = "Поверяющие СИ";
+            this.проверяющиеToolStripMenuItem.Click += new System.EventHandler(this.проверяющиеToolStripMenuItem_Click);
             // 
             // типыСИToolStripMenuItem
             // 
             this.типыСИToolStripMenuItem.Name = "типыСИToolStripMenuItem";
             this.типыСИToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
             this.типыСИToolStripMenuItem.Text = "Типы СИ";
+            this.типыСИToolStripMenuItem.Click += new System.EventHandler(this.типыСИToolStripMenuItem_Click);
             // 
-            // verificationmiDataSet
+            // contextMenuStrip1
             // 
-            this.verificationmiDataSet.DataSetName = "verificationmiDataSet";
-            this.verificationmiDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // measuringinstrumentBindingSource
-            // 
-            this.measuringinstrumentBindingSource.DataMember = "measuringinstrument";
-            this.measuringinstrumentBindingSource.DataSource = this.verificationmiDataSet;
-            // 
-            // measuringinstrumentTableAdapter
-            // 
-            this.measuringinstrumentTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.measuringinstrumentTableAdapter = this.measuringinstrumentTableAdapter;
-            this.tableAdapterManager.placeTableAdapter = this.placeTableAdapter;
-            this.tableAdapterManager.specialstTableAdapter = this.specialstTableAdapter;
-            this.tableAdapterManager.statusTableAdapter = this.statusTableAdapter;
-            this.tableAdapterManager.typeofmiTableAdapter = this.typeofmiTableAdapter;
-            this.tableAdapterManager.UpdateOrder = VerificationMi.verificationmiDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // measuringinstrumentBindingNavigator
             // 
@@ -197,6 +177,41 @@
             this.measuringinstrumentBindingNavigator.Size = new System.Drawing.Size(968, 25);
             this.measuringinstrumentBindingNavigator.TabIndex = 2;
             this.measuringinstrumentBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Добавить";
+            // 
+            // measuringinstrumentBindingSource
+            // 
+            this.measuringinstrumentBindingSource.DataMember = "measuringinstrument";
+            this.measuringinstrumentBindingSource.DataSource = this.verificationmiDataSet;
+            // 
+            // verificationmiDataSet
+            // 
+            this.verificationmiDataSet.DataSetName = "verificationmiDataSet";
+            this.verificationmiDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 22);
+            this.bindingNavigatorCountItem.Text = "для {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Удалить";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -230,17 +245,10 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Текущее положение";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 15);
-            this.bindingNavigatorCountItem.Text = "для {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -248,7 +256,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveNextItem.Text = "Переместить вперед";
             // 
             // bindingNavigatorMoveLastItem
@@ -257,38 +265,20 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveLastItem.Text = "Переместить в конец";
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Добавить";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 20);
-            this.bindingNavigatorDeleteItem.Text = "Удалить";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // measuringinstrumentBindingNavigatorSaveItem
             // 
             this.measuringinstrumentBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.measuringinstrumentBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("measuringinstrumentBindingNavigatorSaveItem.Image")));
             this.measuringinstrumentBindingNavigatorSaveItem.Name = "measuringinstrumentBindingNavigatorSaveItem";
-            this.measuringinstrumentBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.measuringinstrumentBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.measuringinstrumentBindingNavigatorSaveItem.Text = "Сохранить данные";
             this.measuringinstrumentBindingNavigatorSaveItem.Click += new System.EventHandler(this.measuringinstrumentBindingNavigatorSaveItem_Click);
             // 
@@ -310,46 +300,10 @@
             this.dataGridViewTextBoxColumn11,
             this.dataGridViewTextBoxColumn12});
             this.measuringinstrumentDataGridView.DataSource = this.measuringinstrumentBindingSource;
-            this.measuringinstrumentDataGridView.Location = new System.Drawing.Point(0, 52);
+            this.measuringinstrumentDataGridView.Location = new System.Drawing.Point(0, 53);
             this.measuringinstrumentDataGridView.Name = "measuringinstrumentDataGridView";
-            this.measuringinstrumentDataGridView.Size = new System.Drawing.Size(968, 443);
+            this.measuringinstrumentDataGridView.Size = new System.Drawing.Size(968, 441);
             this.measuringinstrumentDataGridView.TabIndex = 3;
-            // 
-            // specialstBindingSource
-            // 
-            this.specialstBindingSource.DataMember = "specialst";
-            this.specialstBindingSource.DataSource = this.verificationmiDataSet;
-            // 
-            // specialstTableAdapter
-            // 
-            this.specialstTableAdapter.ClearBeforeFill = true;
-            // 
-            // placeBindingSource
-            // 
-            this.placeBindingSource.DataMember = "place";
-            this.placeBindingSource.DataSource = this.verificationmiDataSet;
-            // 
-            // placeTableAdapter
-            // 
-            this.placeTableAdapter.ClearBeforeFill = true;
-            // 
-            // statusBindingSource
-            // 
-            this.statusBindingSource.DataMember = "status";
-            this.statusBindingSource.DataSource = this.verificationmiDataSet;
-            // 
-            // statusTableAdapter
-            // 
-            this.statusTableAdapter.ClearBeforeFill = true;
-            // 
-            // typeofmiBindingSource
-            // 
-            this.typeofmiBindingSource.DataMember = "typeofmi";
-            this.typeofmiBindingSource.DataSource = this.verificationmiDataSet;
-            // 
-            // typeofmiTableAdapter
-            // 
-            this.typeofmiTableAdapter.ClearBeforeFill = true;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -404,6 +358,11 @@
             this.dataGridViewTextBoxColumn9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dataGridViewTextBoxColumn9.ValueMember = "idspecialist";
             // 
+            // specialstBindingSource
+            // 
+            this.specialstBindingSource.DataMember = "specialst";
+            this.specialstBindingSource.DataSource = this.verificationmiDataSet;
+            // 
             // dataGridViewTextBoxColumn10
             // 
             this.dataGridViewTextBoxColumn10.DataPropertyName = "place";
@@ -414,6 +373,11 @@
             this.dataGridViewTextBoxColumn10.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewTextBoxColumn10.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dataGridViewTextBoxColumn10.ValueMember = "id";
+            // 
+            // placeBindingSource
+            // 
+            this.placeBindingSource.DataMember = "place";
+            this.placeBindingSource.DataSource = this.verificationmiDataSet;
             // 
             // dataGridViewTextBoxColumn11
             // 
@@ -426,6 +390,11 @@
             this.dataGridViewTextBoxColumn11.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dataGridViewTextBoxColumn11.ValueMember = "idstatus";
             // 
+            // statusBindingSource
+            // 
+            this.statusBindingSource.DataMember = "status";
+            this.statusBindingSource.DataSource = this.verificationmiDataSet;
+            // 
             // dataGridViewTextBoxColumn12
             // 
             this.dataGridViewTextBoxColumn12.DataPropertyName = "type";
@@ -437,6 +406,42 @@
             this.dataGridViewTextBoxColumn12.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dataGridViewTextBoxColumn12.ValueMember = "idtype";
             // 
+            // typeofmiBindingSource
+            // 
+            this.typeofmiBindingSource.DataMember = "typeofmi";
+            this.typeofmiBindingSource.DataSource = this.verificationmiDataSet;
+            // 
+            // measuringinstrumentTableAdapter
+            // 
+            this.measuringinstrumentTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.measuringinstrumentTableAdapter = this.measuringinstrumentTableAdapter;
+            this.tableAdapterManager.placeTableAdapter = this.placeTableAdapter;
+            this.tableAdapterManager.specialstTableAdapter = this.specialstTableAdapter;
+            this.tableAdapterManager.statusTableAdapter = this.statusTableAdapter;
+            this.tableAdapterManager.typeofmiTableAdapter = this.typeofmiTableAdapter;
+            this.tableAdapterManager.UpdateOrder = VerificationMi.verificationmiDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.userTableAdapter = null;
+            // 
+            // placeTableAdapter
+            // 
+            this.placeTableAdapter.ClearBeforeFill = true;
+            // 
+            // specialstTableAdapter
+            // 
+            this.specialstTableAdapter.ClearBeforeFill = true;
+            // 
+            // statusTableAdapter
+            // 
+            this.statusTableAdapter.ClearBeforeFill = true;
+            // 
+            // typeofmiTableAdapter
+            // 
+            this.typeofmiTableAdapter.ClearBeforeFill = true;
+            // 
             // Measuringinstrument
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -447,15 +452,16 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Measuringinstrument";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Средства измерений";
             this.Load += new System.EventHandler(this.Measuringinstrument_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.verificationmiDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.measuringinstrumentBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.measuringinstrumentBindingNavigator)).EndInit();
             this.measuringinstrumentBindingNavigator.ResumeLayout(false);
             this.measuringinstrumentBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.measuringinstrumentBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.verificationmiDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.measuringinstrumentDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.specialstBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.placeBindingSource)).EndInit();

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace VerificationMi
 {
+
     public partial class Measuringinstrument : Form
     {
         public Measuringinstrument()
@@ -19,7 +20,7 @@ namespace VerificationMi
 
         private void хToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void measuringinstrumentBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -43,6 +44,39 @@ namespace VerificationMi
             // TODO: данная строка кода позволяет загрузить данные в таблицу "verificationmiDataSet.measuringinstrument". При необходимости она может быть перемещена или удалена.
             this.measuringinstrumentTableAdapter.Fill(this.verificationmiDataSet.measuringinstrument);
 
+        }
+
+        private void статусыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Status st = new Status();
+            st.Show();
+        }
+
+        private void местаПроверкиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Place pc = new Place();
+            pc.Show();
+        }
+
+        private void проверяющиеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Specialist sp = new Specialist();
+            sp.Show();
+        }
+
+        private void типыСИToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TypeOfMi tof = new TypeOfMi();
+            tof.Show();
+        }
+
+        private void обновитьТаблицуToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
